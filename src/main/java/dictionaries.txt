@@ -1,0 +1,8 @@
+b	56
+bi	524
+bin	4651
+binh	pro
+d	44946
+duc	ok
+long	binh
+minh	ml
