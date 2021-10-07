@@ -10,7 +10,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="dictionary_ui" target="17" />
+      <module name="dictionary_ui" target="16" />
     </bytecodeTargetLevel>
   </component>
 </project>

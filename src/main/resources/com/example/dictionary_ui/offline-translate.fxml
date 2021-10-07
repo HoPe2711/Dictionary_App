@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.control.Button?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" style="-fx-background-color: #fff7d3;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" style="-fx-background-color: #fff7d3;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dictionary_ui.controller.OnlTranslateController">
    <children>
       <TextField layoutX="131.0" layoutY="36.0" prefHeight="38.0" prefWidth="381.0" style="-fx-background-radius: 100;" AnchorPane.leftAnchor="135.0" AnchorPane.topAnchor="36.0" />
       <AnchorPane layoutX="135.0" layoutY="116.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="206.0" prefWidth="569.0" style="-fx-background-color: white; -fx-background-radius: 30;" AnchorPane.leftAnchor="135.0" AnchorPane.rightAnchor="399.0" AnchorPane.topAnchor="116.0" />
@@ -25,7 +25,7 @@
             <Button layoutX="17.0" layoutY="432.0" mnemonicParsing="false" text="Button" />
             <ImageView id="dicimage" fitHeight="65.0" fitWidth="65.0" layoutX="17.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@/book.png" />
+                  <Image url="@/image/book.png" />
                </image>
             </ImageView>
          </children>

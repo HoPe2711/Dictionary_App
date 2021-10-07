@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.*?>
 
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="998.0" style="-fx-background-color: #fff7d3;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.testdesign.ContainerController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="998.0" style="-fx-background-color: #fff7d3;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dictionary_ui.controller.ContainerController">
    <children>
       <AnchorPane prefHeight="750.0" prefWidth="96.0" style="-fx-background-color: #2a4879;" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
@@ -16,7 +16,7 @@
                <graphic>
                   <ImageView fitHeight="44.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../../../search.png" />
+                        <Image url="@../../../image/search.png" />
                      </image>
                   </ImageView>
                </graphic>
@@ -25,7 +25,7 @@
                <graphic>
                   <ImageView fitHeight="37.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../../../globe.png" />
+                        <Image url="@../../../image/globe.png" />
                      </image>
                   </ImageView>
                </graphic>
@@ -34,7 +34,7 @@
                <graphic>
                   <ImageView fitHeight="43.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../../../favorites.png" />
+                        <Image url="@../../../image/favorites.png" />
                      </image>
                   </ImageView>
                </graphic>
@@ -43,7 +43,7 @@
                <graphic>
                   <ImageView fitHeight="60.0" fitWidth="43.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../../../flash-cards.png" />
+                        <Image url="@../../../image/flash-cards.png" />
                      </image>
                   </ImageView>
                </graphic>
@@ -52,21 +52,21 @@
                <graphic>
                   <ImageView fitHeight="37.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../../../settings.png" />
+                        <Image url="@../../../image/settings.png" />
                      </image>
                   </ImageView>
                </graphic>
             </Button>
             <ImageView id="dicimage" fitHeight="65.0" fitWidth="65.0" layoutX="16.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../book.png" />
+                  <Image url="@../../../image/book.png" />
                </image>
             </ImageView>
             <Button layoutX="16.0" layoutY="481.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="65.0" style="-fx-background-color: #2a4879;">
                <graphic>
                   <ImageView fitHeight="37.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../../../about.png" />
+                        <Image url="@../../../image/about.png" />
                      </image>
                   </ImageView>
                </graphic>
