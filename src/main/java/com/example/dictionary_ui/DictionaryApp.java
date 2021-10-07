@@ -7,10 +7,10 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class HelloApplication extends Application {
+public class DictionaryApp extends Application {
     @Override
     public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("container.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(DictionaryApp.class.getResource("container.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 989, 725);
         stage.setTitle("Dictionary");
         stage.setScene(scene);
