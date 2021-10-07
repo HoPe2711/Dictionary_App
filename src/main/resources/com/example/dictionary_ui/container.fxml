@@ -7,8 +7,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="998.0" style="-fx-background-color: #fff7d3;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dictionary_ui.controller.ContainerController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="839.0" prefWidth="1137.0" style="-fx-background-color: #fff7d3;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dictionary_ui.controller.ContainerController">
    <children>
       <AnchorPane prefHeight="750.0" prefWidth="96.0" style="-fx-background-color: #2a4879;" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
@@ -73,5 +72,7 @@
             </Button>
          </children>
       </AnchorPane>
+      <Button layoutX="114.0" layoutY="27.0" mnemonicParsing="false" style="-fx-background-color: #fff7d3;" AnchorPane.leftAnchor="114.0" />
+      <Button layoutX="1028.0" layoutY="27.0" mnemonicParsing="false" style="-fx-background-color: #fff7d3;" AnchorPane.rightAnchor="18.0" />
    </children>
 </AnchorPane>

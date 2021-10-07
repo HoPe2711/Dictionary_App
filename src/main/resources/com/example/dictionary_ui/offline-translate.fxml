@@ -10,25 +10,19 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.control.Button?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" style="-fx-background-color: #fff7d3;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dictionary_ui.controller.OnlTranslateController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="853.0" prefWidth="1177.0" style="-fx-background-color: #fff7d3;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dictionary_ui.controller.OnlTranslateController">
    <children>
-      <TextField layoutX="131.0" layoutY="36.0" prefHeight="38.0" prefWidth="381.0" style="-fx-background-radius: 100;" AnchorPane.leftAnchor="135.0" AnchorPane.topAnchor="36.0" />
-      <AnchorPane layoutX="135.0" layoutY="116.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="206.0" prefWidth="569.0" style="-fx-background-color: white; -fx-background-radius: 30;" AnchorPane.leftAnchor="135.0" AnchorPane.rightAnchor="399.0" AnchorPane.topAnchor="116.0" />
-      <AnchorPane layoutX="135.0" layoutY="355.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="438.0" prefWidth="569.0" style="-fx-background-color: white; -fx-background-radius: 30;" AnchorPane.bottomAnchor="36.0" AnchorPane.leftAnchor="135.0" AnchorPane.rightAnchor="399.0" AnchorPane.topAnchor="355.0" />
-      <AnchorPane layoutX="800.0" layoutY="116.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="677.0" prefWidth="324.0" style="-fx-background-color: white; -fx-background-radius: 30;" AnchorPane.bottomAnchor="36.0" AnchorPane.rightAnchor="33.0" AnchorPane.topAnchor="116.0" />
-      <AnchorPane prefHeight="829.0" prefWidth="99.0" style="-fx-background-color: #2a4879;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
-         <children>
-            <Button layoutX="17.0" layoutY="132.0" mnemonicParsing="false" text="Button" />
-            <Button layoutX="17.0" layoutY="207.0" mnemonicParsing="false" text="Button" />
-            <Button layoutX="17.0" layoutY="282.0" mnemonicParsing="false" text="Button" />
-            <Button layoutX="17.0" layoutY="357.0" mnemonicParsing="false" text="Button" />
-            <Button layoutX="17.0" layoutY="432.0" mnemonicParsing="false" text="Button" />
-            <ImageView id="dicimage" fitHeight="65.0" fitWidth="65.0" layoutX="17.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true">
+      <TextField layoutX="156.0" layoutY="42.0" prefHeight="38.0" prefWidth="340.0" style="-fx-background-radius: 100;" AnchorPane.leftAnchor="156.0" AnchorPane.topAnchor="42.0" />
+      <Button layoutX="496.0" layoutY="29.0" mnemonicParsing="false" style="-fx-background-color: #fff7d3;">
+         <graphic>
+            <ImageView fitHeight="55.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@/image/book.png" />
+                  <Image url="@../../../image/microphone.png" />
                </image>
             </ImageView>
-         </children>
-      </AnchorPane>
+         </graphic>
+      </Button>
+      <AnchorPane layoutX="156.0" layoutY="125.0" prefHeight="714.0" prefWidth="340.0" style="-fx-background-color: white; -fx-background-radius: 30;" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="156.0" AnchorPane.topAnchor="132.0" />
+      <AnchorPane layoutX="530.0" layoutY="132.0" prefHeight="699.0" prefWidth="633.0" style="-fx-background-color: white; -fx-background-radius: 30;" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="530.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="132.0" />
    </children>
 </AnchorPane>
