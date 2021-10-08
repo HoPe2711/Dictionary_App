@@ -2,22 +2,25 @@ package com.example.dictionary_ui;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
-import java.io.IOException;
+import java.io.File;
+import java.net.URL;
 
 public class DictionaryApp extends Application {
+
     @Override
-    public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(DictionaryApp.class.getResource("container.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 989, 725);
-        stage.setTitle("Dictionary");
-        stage.setScene(scene);
-        stage.show();
+    public void start(Stage primaryStage) throws Exception {
+        URL url = new File("src/main/resources/com/example/dictionary_ui/container.fxml").toURI().toURL();
+        Parent root = FXMLLoader.load(url);
+        primaryStage.setTitle("Dictionary");
+        primaryStage.setScene(new Scene(root, 1177, 853));
+        primaryStage.show();
     }
 
     public static void main(String[] args) {
-        launch();
+        launch(args);
     }
 }

@@ -69,7 +69,7 @@ public class DictionaryCommandline {
         }
     }
 
-    public static void main(String[] args) {
-        new DictionaryCommandline(new DictionaryManagement(new Dictionary(), new TrieNode())).dictionaryAdvance();
-    }
+//    public static void main(String[] args) {
+//        new DictionaryCommandline(new DictionaryManagement(new Dictionary(), new TrieNode())).dictionaryAdvance();
+//    }
 }
