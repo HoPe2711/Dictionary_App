@@ -16,6 +16,7 @@ public class DictionaryApp extends Application {
         URL url = new File("src/main/resources/com/example/dictionary_ui/container.fxml").toURI().toURL();
         Parent root = FXMLLoader.load(url);
         primaryStage.setTitle("Dictionary");
+        primaryStage.setResizable(false);
         primaryStage.setScene(new Scene(root, 1177, 853));
         primaryStage.show();
     }

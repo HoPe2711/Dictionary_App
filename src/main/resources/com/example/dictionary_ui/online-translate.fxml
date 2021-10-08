@@ -21,5 +21,6 @@
       </Button>
       <AnchorPane layoutX="156.0" layoutY="125.0" prefHeight="714.0" prefWidth="340.0" style="-fx-background-color: white; -fx-background-radius: 30;" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="156.0" AnchorPane.topAnchor="132.0" />
       <AnchorPane layoutX="530.0" layoutY="132.0" prefHeight="699.0" prefWidth="633.0" style="-fx-background-color: white; -fx-background-radius: 30;" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="530.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="132.0" />
+      <AnchorPane layoutX="530.0" layoutY="132.0" prefHeight="699.0" prefWidth="633.0" style="-fx-background-color: white; -fx-background-radius: 30;" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="530.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="132.0" />
    </children>
 </AnchorPane>
