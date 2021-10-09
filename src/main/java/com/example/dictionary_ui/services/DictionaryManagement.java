@@ -22,9 +22,10 @@ public class DictionaryManagement {
     public DictionaryManagement(Dictionary dictionary, TrieNode trieNode) {
         this.dictionary = dictionary;
         this.trieNode = trieNode;
+        this.loadFromFile();
     }
 
-    private Word dictionaryLookup(String word) {
+    public Word dictionaryLookup(String word) {
         return this.dictionary.getDictionary().get(word);
     }
 
@@ -108,8 +109,8 @@ public class DictionaryManagement {
         else this.dictionary.putaddWord(word);
     }
 
-    public void dictionarySearchPattern(String pattern) {
-        getResult(trieNode.findAllWords(pattern));
+    public Set<String> dictionarySearchPattern(String pattern) {
+        return trieNode.findAllWords(pattern);
     }
 
     public void dictionaryExportToFile() {

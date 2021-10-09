@@ -1,28 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.*?>
-<?import javafx.scene.image.*?>
-<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
 <?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="853.0" prefWidth="1177.0" style="-fx-background-color: #fff7d3;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dictionary_ui.controller.OnlTranslateController">
+<AnchorPane maxHeight="839.0" maxWidth="1042.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="853.0" prefWidth="1177.0" style="-fx-background-color: #fff7d3;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dictionary_ui.controller.OffTranslateController">
    <children>
-      <TextField layoutX="156.0" layoutY="42.0" prefHeight="38.0" prefWidth="340.0" style="-fx-background-radius: 100;" AnchorPane.leftAnchor="156.0" AnchorPane.topAnchor="42.0" />
-      <Button layoutX="496.0" layoutY="29.0" mnemonicParsing="false" style="-fx-background-color: #fff7d3;">
-         <graphic>
-            <ImageView fitHeight="55.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../../../image/microphone.png" />
-               </image>
-            </ImageView>
-         </graphic>
-      </Button>
-      <AnchorPane layoutX="156.0" layoutY="125.0" prefHeight="714.0" prefWidth="340.0" style="-fx-background-color: white; -fx-background-radius: 30;" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="156.0" AnchorPane.topAnchor="132.0" />
-      <AnchorPane layoutX="530.0" layoutY="132.0" prefHeight="699.0" prefWidth="633.0" style="-fx-background-color: white; -fx-background-radius: 30;" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="530.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="132.0" />
+      <TextField fx:id="input_search" onAction="#handleEnterInputSearch" onKeyReleased="#handleChangeInputSearch" layoutX="67.0" layoutY="43.0" prefHeight="38.0" prefWidth="340.0" promptText="Search here..." style="-fx-background-radius: 100;" AnchorPane.leftAnchor="67.0" AnchorPane.topAnchor="43.0">
+         <font>
+            <Font size="18.0" />
+         </font></TextField>
+      <Button layoutX="496.0" layoutY="29.0" mnemonicParsing="false" style="-fx-background-color: #fff7d3;" />
+      <AnchorPane layoutX="67.0" layoutY="116.0" prefHeight="691.0" prefWidth="340.0" style="-fx-background-color: white; -fx-background-radius: 30;" AnchorPane.bottomAnchor="46.0" AnchorPane.leftAnchor="67.0" AnchorPane.topAnchor="116.0">
+         <children>
+            <ListView fx:id="search_list_view" onMouseClicked="#handleSelectItemListView" layoutX="14.0" layoutY="14.0" prefHeight="664.0" prefWidth="316.0" style="-fx-border-color: white;" />
+         </children></AnchorPane>
+      <AnchorPane  fx:id="right_content" layoutX="448.0" layoutY="116.0" prefHeight="691.0" prefWidth="670.0" style="-fx-background-color: white; -fx-background-radius: 30;" AnchorPane.bottomAnchor="46.0" AnchorPane.leftAnchor="448.0" AnchorPane.rightAnchor="59.0" AnchorPane.topAnchor="116.0" />
+      <ImageView fitHeight="55.0" fitWidth="75.0" layoutX="426.0" layoutY="34.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../image/microphone.png" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>

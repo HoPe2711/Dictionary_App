@@ -1,7 +1,7 @@
 module com.example.dictionary_ui {
     requires javafx.controls;
     requires javafx.fxml;
-    requires javafx.graphics;
+    //requires javafx.graphics;
 
     opens com.example.dictionary_ui to javafx.fxml;
     opens com.example.dictionary_ui.controller to javafx.fxml;

@@ -9,7 +9,7 @@
    <children>
       <AnchorPane prefHeight="750.0" prefWidth="96.0" style="-fx-background-color: #2a4879;" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <Button fx:id="btn_nav_search" layoutX="17.0" layoutY="120.0" mnemonicParsing="false" onAction="#handleClickSidebar" prefHeight="44.0" prefWidth="65.0" style="-fx-background-color: #2a4879;" textFill="#2c2c2c">
+            <Button fx:id="btn_nav_search_off" layoutX="17.0" layoutY="120.0" mnemonicParsing="false" onAction="#handleClickSidebar" prefHeight="44.0" prefWidth="65.0" style="-fx-background-color: #2a4879;" textFill="#2c2c2c">
                <graphic>
                   <ImageView fitHeight="44.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
                      <image>

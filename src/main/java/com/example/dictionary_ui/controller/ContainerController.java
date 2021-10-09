@@ -1,8 +1,12 @@
 package com.example.dictionary_ui.controller;
 
+import com.example.dictionary_ui.entity.Dictionary;
+import com.example.dictionary_ui.services.DictionaryManagement;
+import com.example.dictionary_ui.services.trie.TrieNode;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.layout.AnchorPane;
 
@@ -10,17 +14,21 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class ContainerController {
+public class ContainerController implements Initializable {
 
     @FXML
     public Button btn_nav_search_off;
     @FXML
     public AnchorPane content_pane;
 
+    private DictionaryManagement dictionaryManagement = new DictionaryManagement(new Dictionary(), new TrieNode());
     private AnchorPane offTranslatePane = null;
-
     private AnchorPane currentPane;
     private OffTranslateController offTranslateController;
+
+    public DictionaryManagement getDictionaryManagement() {
+        return dictionaryManagement;
+    }
 
     private void setContentPane(AnchorPane anchorPane) {
         this.content_pane.getChildren().setAll(anchorPane);
@@ -61,7 +69,7 @@ public class ContainerController {
     public void initialize(URL location, ResourceBundle resources) {
         try {
             FXMLLoader fxmlLoader = new FXMLLoader();
-            fxmlLoader.setLocation(getClass().getResource("com/example/dictionary_ui/offline-translate.fxml"));
+            fxmlLoader.setLocation(getClass().getResource("/com/example/dictionary_ui/offline-translate.fxml"));
             offTranslatePane = fxmlLoader.load();
             offTranslateController = fxmlLoader.getController();
             offTranslateController.initData(this);
