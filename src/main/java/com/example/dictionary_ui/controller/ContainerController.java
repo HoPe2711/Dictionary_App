@@ -21,7 +21,7 @@ public class ContainerController implements Initializable {
     @FXML
     public AnchorPane content_pane;
 
-    private DictionaryManagement dictionaryManagement = new DictionaryManagement(new Dictionary(), new TrieNode());
+    private DictionaryManagement dictionaryManagement = new DictionaryManagement();
     private AnchorPane offTranslatePane = null;
     private AnchorPane currentPane;
     private OffTranslateController offTranslateController;

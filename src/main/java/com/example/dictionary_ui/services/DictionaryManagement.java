@@ -19,9 +19,9 @@ public class DictionaryManagement {
     private Dictionary dictionary;
     private TrieNode trieNode;
 
-    public DictionaryManagement(Dictionary dictionary, TrieNode trieNode) {
-        this.dictionary = dictionary;
-        this.trieNode = trieNode;
+    public DictionaryManagement() {
+        this.dictionary = new Dictionary();
+        this.trieNode = new TrieNode();
         this.loadFromFile();
     }
 

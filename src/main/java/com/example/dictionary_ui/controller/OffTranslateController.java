@@ -47,7 +47,7 @@ public class OffTranslateController implements Initializable {
         Set<String> stringWords = this.state.getDictionaryManagement().dictionarySearchPattern(spelling);
         search_list_view.getItems().setAll(stringWords);
 
-        Word word = state.getDictionaryManagement().dictionaryLookup(spelling);
+        Word word = state.getDictionaryManagement().dictionaryLookup(stringWords.iterator().next());
         if (word != null)
             viewWordOffline.initData(this.state, word.getWord_target(), word.getWord_explain().toString(),
                 word.getPhonetics());
@@ -57,32 +57,27 @@ public class OffTranslateController implements Initializable {
     public void handleChangeInputSearch(KeyEvent event) {
         if (event.getSource() == input_search) {
             String searchText = input_search.getText();
-            if (!searchText.isEmpty()) {
-                actionSearch(searchText);
-            } else {
-                search_list_view.getItems().clear();
-                reset();
-            }
+            actionSearch(searchText);
         }
     }
 
-    public void reset() {
-        input_search.setText("");
-        search_list_view.getItems().clear();
-        viewWordOffline.initData(this.state, "Word", "", "");
-    }
+//    public void reset() {
+//        input_search.setText("");
+//        search_list_view.getItems().clear();
+//        viewWordOffline.initData(this.state, "Word", "", "");
+//    }
 
     public void reload() {
         if (state == null) return;
 
         String searchText = input_search.getText();
-        if (!searchText.isEmpty()) {
-            actionSearch(searchText);
-        } else {
-            search_list_view.getItems().clear();
-            reset();
-        }
-
+//        if (!searchText.isEmpty()) {
+//            actionSearch(searchText);
+//        } else {
+//            search_list_view.getItems().clear();
+//            reset();
+//        }
+        actionSearch(searchText);
         //viewWordOffline.reload();
     }
 
