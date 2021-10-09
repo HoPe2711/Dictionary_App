@@ -1,5 +1,8 @@
 package com.example.dictionary_ui;
 
+import static com.example.dictionary_ui.data.ConstantVariable.stage_height;
+import static com.example.dictionary_ui.data.ConstantVariable.stage_width;
+
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -17,7 +20,7 @@ public class DictionaryApp extends Application {
         Parent root = FXMLLoader.load(url);
         primaryStage.setTitle("Dictionary");
         primaryStage.setResizable(false);
-        primaryStage.setScene(new Scene(root, 1177, 853));
+        primaryStage.setScene(new Scene(root, stage_width, stage_height));
         primaryStage.show();
     }
 

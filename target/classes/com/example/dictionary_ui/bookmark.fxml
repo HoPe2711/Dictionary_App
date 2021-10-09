@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane prefHeight="839.0" prefWidth="1042.0" style="-fx-background-color: #fff7d3;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dictionary_ui.controller.BookmarkController">
+   <children>
+      <AnchorPane layoutX="90.0" layoutY="74.0" prefHeight="746.0" prefWidth="340.0" style="-fx-background-color: white; -fx-background-radius: 30;" AnchorPane.bottomAnchor="46.0" AnchorPane.leftAnchor="67.0" AnchorPane.topAnchor="47.0">
+         <children>
+            <ListView fx:id="search_list_view1" layoutX="15.0" layoutY="14.0" onMouseClicked="#handleSelectItemListView" prefHeight="641.0" prefWidth="311.0" style="-fx-border-color: white;" styleClass="offline-translate" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="14.0" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="right_content" layoutX="458.0" layoutY="47.0" prefHeight="746.0" prefWidth="548.0" style="-fx-background-color: white; -fx-background-radius: 30;" AnchorPane.bottomAnchor="46.0" AnchorPane.topAnchor="47.0">
+         <children>
+            <HBox alignment="CENTER_LEFT" layoutX="14.0" layoutY="14.0">
+               <children>
+                  <Label prefHeight="45.0" prefWidth="80.0" text="Word" wrapText="true">
+                     <font>
+                        <Font size="30.0" />
+                     </font>
+                  </Label>
+                  <Button mnemonicParsing="false" style="-fx-background-color: white;">
+                     <graphic>
+                        <ImageView fitHeight="39.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../image/volume.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button mnemonicParsing="false" prefHeight="55.0" prefWidth="66.0" style="-fx-background-color: white;">
+                     <graphic>
+                        <ImageView fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../image/trash-bin-mau-khac.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </HBox>
+            <Label layoutX="17.0" layoutY="69.0" prefHeight="31.0" prefWidth="505.0" />
+            <ScrollPane layoutX="16.0" layoutY="119.0" prefHeight="615.0" prefWidth="515.0">
+               <content>
+                  <Label prefHeight="612.0" prefWidth="512.0" style="-fx-background-color: white;" />
+               </content>
+            </ScrollPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

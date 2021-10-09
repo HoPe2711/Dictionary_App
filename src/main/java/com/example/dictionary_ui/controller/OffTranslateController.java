@@ -49,7 +49,8 @@ public class OffTranslateController implements Initializable {
 
         Word word = state.getDictionaryManagement().dictionaryLookup(spelling);
         if (word != null)
-            viewWordOffline.initData(this.state, word.getWord_target(), word.getWord_explain().toString());
+            viewWordOffline.initData(this.state, word.getWord_target(), word.getWord_explain().toString(),
+                word.getPhonetics());
     }
 
     @FXML
@@ -60,6 +61,7 @@ public class OffTranslateController implements Initializable {
                 actionSearch(searchText);
             } else {
                 search_list_view.getItems().clear();
+                reset();
             }
         }
     }
@@ -67,7 +69,7 @@ public class OffTranslateController implements Initializable {
     public void reset() {
         input_search.setText("");
         search_list_view.getItems().clear();
-        viewWordOffline.initData(this.state, "", "");
+        viewWordOffline.initData(this.state, "Word", "", "");
     }
 
     public void reload() {
@@ -78,12 +80,13 @@ public class OffTranslateController implements Initializable {
             actionSearch(searchText);
         } else {
             search_list_view.getItems().clear();
+            reset();
         }
 
         //viewWordOffline.reload();
     }
 
-    protected void loadViewWord(String spelling, String explain) {
+    protected void loadViewWord(String spelling, String explain, String phonetic) {
         FXMLLoader fxmlLoader = new FXMLLoader();
         fxmlLoader.setLocation(getClass().getResource("/com/example/dictionary_ui/view-word-offline.fxml"));
         AnchorPane viewWordVBox;
@@ -95,13 +98,13 @@ public class OffTranslateController implements Initializable {
         }
         right_content.getChildren().addAll(viewWordVBox);
         viewWordOffline= fxmlLoader.getController();
-        viewWordOffline.initData(this.state, spelling, explain);
+        viewWordOffline.initData(this.state, spelling, explain, phonetic);
     }
 
     public void initData(ContainerController state) {
         this.state = state;
         if (viewWordOffline == null) {
-            loadViewWord("", "");
+            loadViewWord("Word", "", "");
         }
 
         this.reload();

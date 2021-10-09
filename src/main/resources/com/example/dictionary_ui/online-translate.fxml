@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.text.*?>
 <?import javafx.scene.image.*?>
 <?import java.lang.*?>
 <?import java.util.*?>
@@ -7,20 +8,38 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="853.0" prefWidth="1177.0" style="-fx-background-color: #fff7d3;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dictionary_ui.controller.OnlTranslateController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="839.0" prefWidth="1042.0" style="-fx-background-color: #fff7d3;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dictionary_ui.controller.OnlTranslateController">
    <children>
-      <TextField layoutX="156.0" layoutY="42.0" prefHeight="38.0" prefWidth="340.0" style="-fx-background-radius: 100;" AnchorPane.leftAnchor="156.0" AnchorPane.topAnchor="42.0" />
-      <Button layoutX="496.0" layoutY="29.0" mnemonicParsing="false" style="-fx-background-color: #fff7d3;">
-         <graphic>
-            <ImageView fitHeight="55.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../../../image/microphone.png" />
-               </image>
-            </ImageView>
-         </graphic>
-      </Button>
-      <AnchorPane layoutX="156.0" layoutY="125.0" prefHeight="714.0" prefWidth="340.0" style="-fx-background-color: white; -fx-background-radius: 30;" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="156.0" AnchorPane.topAnchor="132.0" />
-      <AnchorPane layoutX="530.0" layoutY="132.0" prefHeight="699.0" prefWidth="633.0" style="-fx-background-color: white; -fx-background-radius: 30;" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="530.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="132.0" />
-      <AnchorPane layoutX="530.0" layoutY="132.0" prefHeight="699.0" prefWidth="633.0" style="-fx-background-color: white; -fx-background-radius: 30;" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="530.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="132.0" />
+      <AnchorPane layoutX="88.0" layoutY="76.0" prefHeight="712.0" prefWidth="467.0" style="-fx-background-color: white; -fx-background-radius: 30;" AnchorPane.leftAnchor="67.0">
+         <children>
+            <TextArea layoutX="14.0" layoutY="14.0" prefHeight="688.0" prefWidth="422.0" style="-fx-background-color: white;" wrapText="true" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="13.0" AnchorPane.topAnchor="14.0">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </TextArea>
+            <Button layoutX="14.0" layoutY="633.0" mnemonicParsing="false" style="-fx-background-color: white;" AnchorPane.bottomAnchor="14.0" AnchorPane.rightAnchor="378.0">
+               <graphic>
+                  <ImageView fitHeight="55.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../image/microphone.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="552.0" layoutY="76.0" prefHeight="712.0" prefWidth="467.0" style="-fx-background-color: white; -fx-background-radius: 30;">
+         <children>
+            <ScrollPane layoutX="14.0" layoutY="16.0" prefHeight="688.0" prefWidth="433.0" style="-fx-background-color: white;" AnchorPane.bottomAnchor="8.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="11.0" AnchorPane.topAnchor="16.0">
+               <content>
+                  <Label prefHeight="681.0" prefWidth="439.0" style="-fx-background-color: white;" wrapText="true">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+               </content>
+            </ScrollPane>
+         </children>
+      </AnchorPane>
    </children>
 </AnchorPane>
