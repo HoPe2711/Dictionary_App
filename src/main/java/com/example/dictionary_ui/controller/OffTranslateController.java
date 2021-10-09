@@ -1,6 +1,10 @@
 package com.example.dictionary_ui.controller;
 
 import com.example.dictionary_ui.entity.Word;
+import java.io.IOException;
+import java.net.URL;
+import java.util.ResourceBundle;
+import java.util.Set;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -10,12 +14,6 @@ import javafx.scene.control.TextField;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.VBox;
-
-import java.io.IOException;
-import java.net.URL;
-import java.util.ResourceBundle;
-import java.util.Set;
 
 public class OffTranslateController implements Initializable {
     protected ContainerController state;
@@ -46,11 +44,15 @@ public class OffTranslateController implements Initializable {
     public void actionSearch(String spelling) {
         Set<String> stringWords = this.state.getDictionaryManagement().dictionarySearchPattern(spelling);
         search_list_view.getItems().setAll(stringWords);
-
-        Word word = state.getDictionaryManagement().dictionaryLookup(stringWords.iterator().next());
-        if (word != null)
-            viewWordOffline.initData(this.state, word.getWord_target(), word.getWord_explain().toString(),
-                word.getPhonetics());
+        if (stringWords.size() == 0) loadViewWord("Your word doesn't exist", "", "");
+        else {
+            Word word = state.getDictionaryManagement()
+                .dictionaryLookup(stringWords.iterator().next());
+            if (word != null)
+                viewWordOffline.initData(this.state, word.getWord_target(),
+                    word.getWord_explain().toString(),
+                    word.getPhonetics());
+        }
     }
 
     @FXML

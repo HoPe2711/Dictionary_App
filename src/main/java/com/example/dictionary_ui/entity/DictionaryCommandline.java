@@ -1,8 +1,6 @@
 package com.example.dictionary_ui.entity;
 
 import com.example.dictionary_ui.services.DictionaryManagement;
-import com.example.dictionary_ui.services.trie.TrieNode;
-
 import java.util.InputMismatchException;
 import java.util.Scanner;
 

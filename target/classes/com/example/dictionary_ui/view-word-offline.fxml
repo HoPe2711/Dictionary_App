@@ -20,7 +20,7 @@
                         <Font size="30.0" />
                      </font>
                   </Label>
-                  <Button layoutX="134.0" layoutY="31.0" mnemonicParsing="false" style="-fx-background-color: white;">
+                  <Button onMouseClicked="#onMouseClickSpeak" layoutX="134.0" layoutY="31.0" mnemonicParsing="false" style="-fx-background-color: white;">
                      <graphic>
                         <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
                            <image>

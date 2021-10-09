@@ -3,14 +3,13 @@ package com.example.dictionary_ui;
 import static com.example.dictionary_ui.data.ConstantVariable.stage_height;
 import static com.example.dictionary_ui.data.ConstantVariable.stage_width;
 
+import java.io.File;
+import java.net.URL;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-
-import java.io.File;
-import java.net.URL;
 
 public class DictionaryApp extends Application {
 

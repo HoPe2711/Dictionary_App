@@ -1,18 +1,15 @@
 package com.example.dictionary_ui.controller;
 
-import com.example.dictionary_ui.entity.Dictionary;
 import com.example.dictionary_ui.services.DictionaryManagement;
-import com.example.dictionary_ui.services.trie.TrieNode;
+import java.io.IOException;
+import java.net.URL;
+import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.layout.AnchorPane;
-
-import java.io.IOException;
-import java.net.URL;
-import java.util.ResourceBundle;
 
 public class ContainerController implements Initializable {
 
