@@ -25,7 +25,7 @@ public class ViewWordOffline {
             voice.allocate();
         }
         try {
-            voice.setRate(160);
+            voice.setRate(140);
             voice.setPitch(100);
             voice.setVolume(100);
             voice.speak(spelling);
