@@ -11,7 +11,7 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="839.0" prefWidth="1042.0" style="-fx-background-color: #fff7d3;" styleClass="list-cell" stylesheets="@offline-translate.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dictionary_ui.controller.OffTranslateController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="839.0" prefWidth="1300.0" style="-fx-background-color: #fff7d3;" styleClass="list-cell" stylesheets="@offline-translate.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dictionary_ui.controller.OffTranslateController">
   <children>
     <TextField fx:id="input_search" layoutX="83.0" layoutY="53.0" onAction="#handleEnterInputSearch" onKeyReleased="#handleChangeInputSearch" prefHeight="39.0" prefWidth="340.0" promptText="Search here..." style="-fx-background-radius: 100;">
       <font>
@@ -31,6 +31,6 @@
         <ListView fx:id="search_list_view" layoutX="14.0" layoutY="14.0" onMouseClicked="#handleSelectItemListView" prefHeight="641.0" prefWidth="311.0" style="-fx-border-color: white;" styleClass="offline-translate" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="14.0" />
       </children>
     </AnchorPane>
-    <AnchorPane fx:id="right_content" layoutX="448.0" layoutY="116.0" prefHeight="674.0" prefWidth="540.0" style="-fx-background-color: white; -fx-background-radius: 30;" AnchorPane.bottomAnchor="46.0" AnchorPane.topAnchor="116.0" />
+    <AnchorPane fx:id="right_content" layoutX="445.0" layoutY="128.0" prefHeight="665.0" prefWidth="777.0" style="-fx-background-color: white; -fx-background-radius: 30;" AnchorPane.bottomAnchor="46.0" AnchorPane.topAnchor="116.0" />
   </children>
 </AnchorPane>
