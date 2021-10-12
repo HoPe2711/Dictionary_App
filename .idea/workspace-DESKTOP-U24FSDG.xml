@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="297c80ef-cd78-4e20-9da2-8ad208078e3c" name="Changes" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="FxmlFile" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1z76aFSFIyHgkp8KW1V0frJQOSc" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../freetts-1.2/lib/mbrola.jar" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\binht\OneDrive\Máy tính\binh\OOP\dictionary_ui\src\main\java\com\example\dictionary_ui\entity" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.example.dictionary_ui.entity" />
+      <recent name="com.example.dictionary_ui.services" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.DictionaryApp">
+    <configuration name="DictionaryApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.example.dictionary_ui.DictionaryApp" />
+      <module name="dictionary_ui" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.dictionary_ui.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DictionaryCommandline" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.example.dictionary_ui.entity.DictionaryCommandline" />
+      <module name="dictionary_ui" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.dictionary_ui.entity.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GoogleApiTranslate" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.example.dictionary_ui.services.GoogleApiTranslate" />
+      <module name="dictionary_ui" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.dictionary_ui.services.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="HelloApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.example.dictionary_ui.HelloApplication" />
+      <module name="dictionary_ui" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.dictionary_ui.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="jsapi.jar" type="JarApplication" temporary="true">
+      <option name="JAR_PATH" value="$PROJECT_DIR$/../../freetts-1.2/lib/jsapi.jar!/" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.DictionaryApp" />
+        <item itemvalue="Application.GoogleApiTranslate" />
+        <item itemvalue="JAR Application.jsapi.jar" />
+        <item itemvalue="Application.DictionaryCommandline" />
+        <item itemvalue="Application.HelloApplication" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="297c80ef-cd78-4e20-9da2-8ad208078e3c" name="Changes" comment="" />
+      <created>1633486841180</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1633486841180</updated>
+      <workItem from="1633486842610" duration="13631000" />
+      <workItem from="1633534631409" duration="19000" />
+      <workItem from="1633562578450" duration="9362000" />
+      <workItem from="1633678821774" duration="6456000" />
+      <workItem from="1633718935011" duration="153000" />
+      <workItem from="1633757729412" duration="5817000" />
+      <workItem from="1633763949899" duration="87000" />
+      <workItem from="1633771467815" duration="624000" />
+      <workItem from="1633793598353" duration="1394000" />
+      <workItem from="1633795576552" duration="9977000" />
+      <workItem from="1633805789118" duration="127000" />
+      <workItem from="1633835411351" duration="1396000" />
+      <workItem from="1633879604450" duration="10013000" />
+      <workItem from="1633936806749" duration="586000" />
+      <workItem from="1633937574758" duration="1882000" />
+      <workItem from="1633939728945" duration="168000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+</project>
