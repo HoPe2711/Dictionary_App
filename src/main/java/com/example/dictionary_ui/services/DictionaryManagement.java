@@ -1,5 +1,6 @@
 package com.example.dictionary_ui.services;
 
+import com.example.dictionary_ui.controller.Notification;
 import com.example.dictionary_ui.data.ConstantVariable;
 import com.example.dictionary_ui.entity.Dictionary;
 import com.example.dictionary_ui.entity.Word;
@@ -72,24 +73,29 @@ public class DictionaryManagement {
     }
 
     public void addWordToDictionary(Word word) {
-        if (dictionaryLookup(word.getWord_target()) != null) System.out.println("Tu da ton tai");
+        if (dictionaryLookup(word.getWord_target()) != null) Notification.errorAction("Your word exists!");
         else {
             this.dictionary.addWord(word);
             trieNode.insert(word.getWord_target());
+            Notification.acceptAction();
         }
     }
 
     public void deleteWordToDictionary(String word) {
-        if (dictionaryLookup(word) == null) System.out.println("Tu khong ton tai");
+        if (dictionaryLookup(word) == null) Notification.errorAction("Your word doesn't exists!");
         else {
             this.dictionary.deleteWord(word);
             trieNode.delete(word);
+            Notification.acceptAction();
         }
     }
 
     public void putWordToDictionary(Word word) {
-        if (dictionaryLookup(word.getWord_target()) == null) System.out.println("Tu khong ton tai");
-        else this.dictionary.putaddWord(word);
+        if (dictionaryLookup(word.getWord_target()) == null) Notification.errorAction("Your word doesn't exists!");
+        else {
+            this.dictionary.putaddWord(word);
+            Notification.acceptAction();
+        }
     }
 
     public Set<String> dictionarySearchPattern(String pattern) {
