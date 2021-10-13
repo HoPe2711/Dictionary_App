@@ -1,15 +1,19 @@
 package com.example.dictionary_ui;
 
+import static com.example.dictionary_ui.controller.ContainerController.dictionaryManagement;
 import static com.example.dictionary_ui.data.ConstantVariable.stage_height;
 import static com.example.dictionary_ui.data.ConstantVariable.stage_width;
 
 import java.io.File;
 import java.net.URL;
 import javafx.application.Application;
+import javafx.application.Platform;
+import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import javafx.stage.WindowEvent;
 
 public class DictionaryApp extends Application {
 
@@ -21,6 +25,13 @@ public class DictionaryApp extends Application {
         primaryStage.setResizable(false);
         primaryStage.setScene(new Scene(root, stage_width, stage_height));
         primaryStage.show();
+        primaryStage.setOnCloseRequest(new EventHandler<WindowEvent>() {
+            public void handle(WindowEvent e) {
+                dictionaryManagement.dictionaryExportToFile();
+                Platform.exit();
+                System.exit(0);
+            }
+        });
     }
 
     public static void main(String[] args) {

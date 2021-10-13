@@ -14,16 +14,18 @@ import javafx.scene.layout.AnchorPane;
 public class ContainerController implements Initializable {
 
     @FXML
-    public Button btn_nav_search_off, btn_nav_search_on;
+    public Button btn_nav_search_off, btn_nav_search_on, btn_add_word;
     @FXML
     public AnchorPane content_pane;
 
-    private DictionaryManagement dictionaryManagement = new DictionaryManagement();
+    public static DictionaryManagement dictionaryManagement = new DictionaryManagement();
     private AnchorPane offTranslatePane = null;
     private AnchorPane onTranslatePane = null;
+    private AnchorPane addWordPane = null;
     private AnchorPane currentPane;
     private OffTranslateController offTranslateController;
     private OnlTranslateController onlTranslateController;
+    private AddWordController addWordController;
 
     public DictionaryManagement getDictionaryManagement() {
         return dictionaryManagement;
@@ -40,8 +42,8 @@ public class ContainerController implements Initializable {
             showSearchPane();
         } else if (event.getSource() == btn_nav_search_on) {
             showOnlineSearchPane();
-//        } else if (event.getSource() == btn_nav_history) {
-//            showHistoryPane();
+        } else if (event.getSource() == btn_add_word) {
+            showAddPane();
 //        } else if (event.getSource() == btn_nav_bookmark) {
 //            showBookmarkPane();
 //        } else if (event.getSource() == btn_nav_edit) {
@@ -71,6 +73,13 @@ public class ContainerController implements Initializable {
 //        btn_nav_search_off.setStyle("-fx-background-color:  #13109c;");
     }
 
+    public void showAddPane() {
+        this.setContentPane(addWordPane);
+        addWordController.initData(this);
+//        this.resetStyleNav();
+//        btn_nav_search_off.setStyle("-fx-background-color:  #13109c;");
+    }
+
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         try {
@@ -89,6 +98,16 @@ public class ContainerController implements Initializable {
             onTranslatePane = fxmlLoader.load();
             onlTranslateController = fxmlLoader.getController();
             onlTranslateController.initData(this);
+        } catch (IOException e) {
+            System.out.println("Error load add_pane pane.");
+        }
+
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader();
+            fxmlLoader.setLocation(getClass().getResource("/com/example/dictionary_ui/add-word.fxml"));
+            addWordPane = fxmlLoader.load();
+            addWordController = fxmlLoader.getController();
+            addWordController.initData(this);
         } catch (IOException e) {
             System.out.println("Error load add_pane pane.");
         }

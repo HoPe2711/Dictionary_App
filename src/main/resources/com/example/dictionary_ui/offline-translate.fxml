@@ -19,13 +19,13 @@
       </font>
     </TextField>
     <Button layoutX="423.0" layoutY="37.0" mnemonicParsing="false" style="-fx-background-color: #fff7d3;">
-         <graphic>
-          <ImageView fitHeight="55.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true">
-            <image>
-              <Image url="@../../../image/microphone.png" />
-            </image>
-          </ImageView>
-         </graphic></Button>
+      <graphic>
+        <ImageView fitHeight="55.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true">
+          <image>
+            <Image url="@../../../image/microphone.png" />
+          </image>
+        </ImageView>
+      </graphic></Button>
     <AnchorPane layoutX="67.0" layoutY="116.0" prefHeight="691.0" prefWidth="340.0" style="-fx-background-color: white; -fx-background-radius: 30;" AnchorPane.bottomAnchor="46.0" AnchorPane.leftAnchor="67.0" AnchorPane.topAnchor="116.0">
       <children>
         <ListView fx:id="search_list_view" layoutX="14.0" layoutY="14.0" onMouseClicked="#handleSelectItemListView" prefHeight="641.0" prefWidth="311.0" style="-fx-border-color: white;" styleClass="offline-translate" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="14.0" />
