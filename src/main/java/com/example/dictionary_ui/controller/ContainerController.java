@@ -75,9 +75,14 @@ public class ContainerController implements Initializable {
 
     public void showAddPane() {
         this.setContentPane(addWordPane);
-        addWordController.initData(this);
+        addWordController.initData(this.offTranslateController);
 //        this.resetStyleNav();
 //        btn_nav_search_off.setStyle("-fx-background-color:  #13109c;");
+    }
+
+    public void showPutPane(String word, String explain){
+        this.setContentPane(addWordPane);
+        addWordController.initData(this.offTranslateController, word, explain);
     }
 
     @Override
@@ -107,7 +112,7 @@ public class ContainerController implements Initializable {
             fxmlLoader.setLocation(getClass().getResource("/com/example/dictionary_ui/add-word.fxml"));
             addWordPane = fxmlLoader.load();
             addWordController = fxmlLoader.getController();
-            addWordController.initData(this);
+            addWordController.initData(this.offTranslateController);
         } catch (IOException e) {
             System.out.println("Error load add_pane pane.");
         }

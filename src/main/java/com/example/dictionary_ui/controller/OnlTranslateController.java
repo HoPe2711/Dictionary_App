@@ -21,7 +21,7 @@ public class OnlTranslateController{
   private Label output_search;
 
   private ContainerController state;
-  private static GoogleApiTranslate googleApiTranslate = new GoogleApiTranslate();
+  private static final GoogleApiTranslate googleApiTranslate = new GoogleApiTranslate();
 
   @FXML
   public void onMouseClickSpeak(MouseEvent event) {

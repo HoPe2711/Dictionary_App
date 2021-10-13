@@ -11,7 +11,7 @@ import javafx.scene.input.MouseEvent;
 public class ViewWordOffline {
 
     @FXML
-    private Button btn_delete_word;
+    private Button btn_delete_word, btn_put_word;
     @FXML
     private Label view_word_spelling;
     @FXML
@@ -31,6 +31,13 @@ public class ViewWordOffline {
         if (event.getSource() == btn_delete_word) {
             this.state.state.getDictionaryManagement().deleteWordToDictionary(view_word_spelling.getText());
             this.state.reload();
+        }
+    }
+
+    @FXML
+    public void handlePutWord(ActionEvent event){
+        if (event.getSource() == btn_put_word) {
+            this.state.state.showPutPane(view_word_spelling.getText(), view_word_explain.getText());
         }
     }
 

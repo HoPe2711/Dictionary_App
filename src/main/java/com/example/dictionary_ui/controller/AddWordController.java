@@ -11,9 +11,9 @@ import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 
 public class AddWordController implements Initializable {
-  private ContainerController state;
+  private OffTranslateController state;
   @FXML
-  private Button btn_add_word;
+  private Button btn_add_word, btn_put_word;
   @FXML
   protected TextField word;
   @FXML
@@ -23,12 +23,30 @@ public class AddWordController implements Initializable {
   public void handleEnterAddWord(ActionEvent event){
     if (event.getSource() == btn_add_word) {
       Word add_word = new Word(word.getText().trim(), explain.getText().trim());
-      this.state.getDictionaryManagement().addWordToDictionary(add_word);
+      this.state.state.getDictionaryManagement().addWordToDictionary(add_word);
+      this.state.input_search.setText(word.getText().trim());
+      this.state.state.showSearchPane();
     }
   }
 
-  public void initData(ContainerController state) {
+  @FXML
+  public void handleEnterPutWord(ActionEvent event){
+    if (event.getSource() == btn_put_word) {
+      Word add_word = new Word(word.getText().trim(), explain.getText().trim());
+      this.state.state.getDictionaryManagement().putWordToDictionary(add_word);
+      this.state.input_search.setText(word.getText().trim());
+      this.state.state.showSearchPane();
+    }
+  }
+
+  public void initData(OffTranslateController state) {
     this.state = state;
+  }
+
+  public void initData(OffTranslateController state, String word, String explain) {
+    this.state = state;
+    this.word.setText(word);
+    this.explain.setText(explain);
   }
 
   @Override
