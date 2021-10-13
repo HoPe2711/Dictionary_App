@@ -14,7 +14,6 @@ public class GoogleApiTranslate {
   }
 
   public String translate(String langFrom, String langTo, String text) throws IOException {
-    // INSERT YOU URL HERE
     String urlStr = "https://script.google.com/macros/s/AKfycbyw6-MNCE-_-Pum2ZL3yxZzevbPzLWhsueBLmawKKeRQnMLSyY/exec" +
         "?q=" + URLEncoder.encode(text, "UTF-8") +
         "&target=" + langTo +

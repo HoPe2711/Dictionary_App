@@ -5,7 +5,6 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
-
 <AnchorPane prefHeight="839.0" prefWidth="1137.0" style="-fx-background-color: #fff7d3;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dictionary_ui.controller.AddWordController">
    <children>
       <Button fx:id="btn_add_word" alignment="CENTER" contentDisplay="CENTER" layoutX="996.0" layoutY="745.0" mnemonicParsing="false" onAction="#handleEnterAddWord" prefHeight="59.0" prefWidth="112.0" style="-fx-background-color: #2a4879; -fx-background-radius: 50;" text="Add" textAlignment="CENTER" textFill="WHITE">
