@@ -4,11 +4,7 @@ public class Meaning {
     private StringBuilder meaning;
 
     public Meaning() {
-        this.meaning = new StringBuilder("");
-    }
-
-    public Meaning(StringBuilder meaning) {
-        this.meaning = meaning;
+        this.meaning = new StringBuilder();
     }
 
     @Override

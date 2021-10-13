@@ -1,5 +1,7 @@
 package com.example.dictionary_ui.controller;
 
+import static com.example.dictionary_ui.data.ConstantVariable.PATH_VIEW_WORD;
+
 import com.example.dictionary_ui.entity.Word;
 import java.io.IOException;
 import java.net.URL;
@@ -83,10 +85,16 @@ public class OffTranslateController implements Initializable {
     actionSearch(searchText);
   }
 
-  protected void loadViewWord(String spelling, String explain, String phonetic) {
+  public void initData(ContainerController state) {
+    this.state = state;
+    this.reload();
+  }
+
+  @Override
+  public void initialize(URL location, ResourceBundle resources) {
     FXMLLoader fxmlLoader = new FXMLLoader();
     fxmlLoader.setLocation(
-        getClass().getResource("/com/example/dictionary_ui/view-word-offline.fxml"));
+        getClass().getResource(PATH_VIEW_WORD));
     AnchorPane viewWordVBox;
     try {
       viewWordVBox = fxmlLoader.load();
@@ -96,19 +104,6 @@ public class OffTranslateController implements Initializable {
     }
     right_content.getChildren().addAll(viewWordVBox);
     viewWordOffline = fxmlLoader.getController();
-    viewWordOffline.initData(this, spelling, explain, phonetic);
-  }
-
-  public void initData(ContainerController state) {
-    this.state = state;
-    if (viewWordOffline == null) {
-      loadViewWord("Word", "", "");
-    }
-
-    this.reload();
-  }
-
-  @Override
-  public void initialize(URL location, ResourceBundle resources) {
+    viewWordOffline.initData(this, "Word", "", "");
   }
 }

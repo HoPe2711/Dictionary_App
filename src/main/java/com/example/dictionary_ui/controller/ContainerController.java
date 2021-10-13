@@ -1,5 +1,9 @@
 package com.example.dictionary_ui.controller;
 
+import static com.example.dictionary_ui.data.ConstantVariable.PATH_ADD_WORD;
+import static com.example.dictionary_ui.data.ConstantVariable.PATH_OFF_DIC;
+import static com.example.dictionary_ui.data.ConstantVariable.PATH_ON_DIC;
+
 import com.example.dictionary_ui.services.DictionaryManagement;
 import java.io.IOException;
 import java.net.URL;
@@ -22,7 +26,6 @@ public class ContainerController implements Initializable {
     private AnchorPane offTranslatePane = null;
     private AnchorPane onTranslatePane = null;
     private AnchorPane addWordPane = null;
-    private AnchorPane currentPane;
     private OffTranslateController offTranslateController;
     private OnlTranslateController onlTranslateController;
     private AddWordController addWordController;
@@ -33,7 +36,6 @@ public class ContainerController implements Initializable {
 
     private void setContentPane(AnchorPane anchorPane) {
         this.content_pane.getChildren().setAll(anchorPane);
-        this.currentPane = anchorPane;
     }
 
     @FXML
@@ -89,7 +91,7 @@ public class ContainerController implements Initializable {
     public void initialize(URL location, ResourceBundle resources) {
         try {
             FXMLLoader fxmlLoader = new FXMLLoader();
-            fxmlLoader.setLocation(getClass().getResource("/com/example/dictionary_ui/offline-translate.fxml"));
+            fxmlLoader.setLocation(getClass().getResource(PATH_OFF_DIC));
             offTranslatePane = fxmlLoader.load();
             offTranslateController = fxmlLoader.getController();
             offTranslateController.initData(this);
@@ -99,7 +101,7 @@ public class ContainerController implements Initializable {
 
         try {
             FXMLLoader fxmlLoader = new FXMLLoader();
-            fxmlLoader.setLocation(getClass().getResource("/com/example/dictionary_ui/online-translate.fxml"));
+            fxmlLoader.setLocation(getClass().getResource(PATH_ON_DIC));
             onTranslatePane = fxmlLoader.load();
             onlTranslateController = fxmlLoader.getController();
             onlTranslateController.initData(this);
@@ -109,7 +111,7 @@ public class ContainerController implements Initializable {
 
         try {
             FXMLLoader fxmlLoader = new FXMLLoader();
-            fxmlLoader.setLocation(getClass().getResource("/com/example/dictionary_ui/add-word.fxml"));
+            fxmlLoader.setLocation(getClass().getResource(PATH_ADD_WORD));
             addWordPane = fxmlLoader.load();
             addWordController = fxmlLoader.getController();
             addWordController.initData(this.offTranslateController);

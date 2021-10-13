@@ -23,9 +23,10 @@ public class AddWordController implements Initializable {
   public void handleEnterAddWord(ActionEvent event){
     if (event.getSource() == btn_add_word) {
       Word add_word = new Word(word.getText().trim(), explain.getText().trim());
-      this.state.state.getDictionaryManagement().addWordToDictionary(add_word);
-      this.state.input_search.setText(word.getText().trim());
-      this.state.state.showSearchPane();
+      if (this.state.state.getDictionaryManagement().addWordToDictionary(add_word)){
+        this.state.input_search.setText(word.getText().trim());
+        this.state.state.showSearchPane();
+      }
     }
   }
 
@@ -33,9 +34,10 @@ public class AddWordController implements Initializable {
   public void handleEnterPutWord(ActionEvent event){
     if (event.getSource() == btn_put_word) {
       Word add_word = new Word(word.getText().trim(), explain.getText().trim());
-      this.state.state.getDictionaryManagement().putWordToDictionary(add_word);
-      this.state.input_search.setText(word.getText().trim());
-      this.state.state.showSearchPane();
+      if (this.state.state.getDictionaryManagement().putWordToDictionary(add_word)){
+        this.state.input_search.setText(word.getText().trim());
+        this.state.state.showSearchPane();
+      }
     }
   }
 

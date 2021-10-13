@@ -35,10 +35,6 @@ public class Word {
         return word_explain;
     }
 
-    public void setWord_explain(Meaning word_explain) {
-        this.word_explain = word_explain;
-    }
-
     public String getPhonetics() {
         return phonetics;
     }

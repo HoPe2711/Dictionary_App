@@ -65,20 +65,21 @@ public class DictionaryManagement {
                 }
             }
             this.dictionary.addWord(word);
-            System.out.println(this.dictionary.getDictionary().keySet().size());
             trieNode.buildTrie(this.dictionary.getDictionary().keySet());
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
 
-    public void addWordToDictionary(Word word) {
+    public boolean addWordToDictionary(Word word) {
         if (dictionaryLookup(word.getWord_target()) != null) Notification.errorAction("Your word exists!");
         else {
             this.dictionary.addWord(word);
             trieNode.insert(word.getWord_target());
             Notification.acceptAction();
+            return true;
         }
+        return false;
     }
 
     public void deleteWordToDictionary(String word) {
@@ -90,12 +91,14 @@ public class DictionaryManagement {
         }
     }
 
-    public void putWordToDictionary(Word word) {
+    public boolean putWordToDictionary(Word word) {
         if (dictionaryLookup(word.getWord_target()) == null) Notification.errorAction("Your word doesn't exists!");
         else {
             this.dictionary.putaddWord(word);
             Notification.acceptAction();
+            return true;
         }
+        return false;
     }
 
     public Set<String> dictionarySearchPattern(String pattern) {
@@ -112,7 +115,7 @@ public class DictionaryManagement {
                 pw.printf("%s", word.getWord_explain());
             }
             pw.flush();
-            System.out.printf("Xuat file %s thanh cong\n", ConstantVariable.PATH);
+            System.out.print("Xuat file thanh cong\n");
         } catch (IOException e) {
             System.err.println("\nLoi: Khong ghi duoc file");
         }

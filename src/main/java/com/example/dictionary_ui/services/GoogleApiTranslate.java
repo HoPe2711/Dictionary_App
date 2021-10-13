@@ -6,6 +6,7 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.net.URLEncoder;
+import java.nio.charset.StandardCharsets;
 
 public class GoogleApiTranslate {
 
@@ -15,7 +16,7 @@ public class GoogleApiTranslate {
 
   public String translate(String langFrom, String langTo, String text) throws IOException {
     String urlStr = "https://script.google.com/macros/s/AKfycbyw6-MNCE-_-Pum2ZL3yxZzevbPzLWhsueBLmawKKeRQnMLSyY/exec" +
-        "?q=" + URLEncoder.encode(text, "UTF-8") +
+        "?q=" + URLEncoder.encode(text, StandardCharsets.UTF_8) +
         "&target=" + langTo +
         "&source=" + langFrom;
     URL url = new URL(urlStr);

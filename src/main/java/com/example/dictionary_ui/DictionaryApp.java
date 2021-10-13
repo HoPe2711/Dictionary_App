@@ -1,6 +1,7 @@
 package com.example.dictionary_ui;
 
 import static com.example.dictionary_ui.controller.ContainerController.dictionaryManagement;
+import static com.example.dictionary_ui.data.ConstantVariable.PATH_CONTAINER;
 import static com.example.dictionary_ui.data.ConstantVariable.stage_height;
 import static com.example.dictionary_ui.data.ConstantVariable.stage_width;
 
@@ -19,7 +20,7 @@ public class DictionaryApp extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-        URL url = new File("src/main/resources/com/example/dictionary_ui/container.fxml").toURI().toURL();
+        URL url = new File(PATH_CONTAINER).toURI().toURL();
         Parent root = FXMLLoader.load(url);
         primaryStage.setTitle("Dictionary");
         primaryStage.setResizable(false);
