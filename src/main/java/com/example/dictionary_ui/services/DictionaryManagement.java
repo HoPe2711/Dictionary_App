@@ -28,22 +28,6 @@ public class DictionaryManagement {
         return this.dictionary.getDictionary().get(word);
     }
 
-    private void getResult(Set<String> keys) {
-        System.out.printf("%-4s|%-45s|%s\n", "No", "English", "Tieng Viet");
-        int order = 0;
-        for (String key : keys) {
-            String no = String.valueOf(++order);
-            Word word = this.dictionary.getDictionary().get(key);
-            String word_target = word.getWord_target();
-            String word_explain = word.getWord_explain().toString();
-            System.out.printf("%-4s%s|%-45s|%s\n", no, word_target, word.getPhonetics(), word_explain);
-        }
-    }
-
-    public void getFromCommandLine() {
-        getResult(this.dictionary.getDictionary().keySet());
-    }
-
     public void loadFromFile() {
         try {
             Path path = Paths.get(ConstantVariable.PATH);
