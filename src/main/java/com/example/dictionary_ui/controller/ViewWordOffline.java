@@ -37,7 +37,7 @@ public class ViewWordOffline {
     @FXML
     public void handlePutWord(ActionEvent event){
         if (event.getSource() == btn_put_word) {
-            this.state.state.showPutPane(view_word_spelling.getText(), view_word_explain.getText());
+            this.state.state.showPutPane(view_word_spelling.getText(), view_word_phonetic.getText(), view_word_explain.getText());
         }
     }
 

@@ -82,9 +82,9 @@ public class ContainerController implements Initializable {
 //        btn_nav_search_off.setStyle("-fx-background-color:  #13109c;");
     }
 
-    public void showPutPane(String word, String explain){
+    public void showPutPane(String word, String phonetic, String explain){
         this.setContentPane(addWordPane);
-        addWordController.initData(this.offTranslateController, word, explain);
+        addWordController.initData(this.offTranslateController, word, phonetic, explain);
     }
 
     @Override

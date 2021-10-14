@@ -17,6 +17,14 @@ public class Word {
         this.phonetics = "/null/";
     }
 
+    public Word(String word, String explain, String phonetics) {
+        this.word_explain = new Meaning();
+        addToMeaning(explain);
+        this.word_target = word;
+        if (phonetics == null) this.phonetics = "/null/";
+        else this.phonetics = phonetics;
+    }
+
     public Word(String word_target, Meaning word_explain, String phonetics) {
         this.word_target = word_target;
         this.word_explain = word_explain;

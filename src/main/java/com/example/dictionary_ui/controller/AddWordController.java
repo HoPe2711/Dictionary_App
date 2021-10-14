@@ -12,6 +12,7 @@ import javafx.scene.control.TextField;
 
 public class AddWordController implements Initializable {
   private OffTranslateController state;
+  private String phonetic;
   @FXML
   private Button btn_add_word, btn_put_word;
   @FXML
@@ -33,7 +34,7 @@ public class AddWordController implements Initializable {
   @FXML
   public void handleEnterPutWord(ActionEvent event){
     if (event.getSource() == btn_put_word) {
-      Word add_word = new Word(word.getText().trim(), explain.getText().trim());
+      Word add_word = new Word(word.getText().trim(), explain.getText().trim(), this.phonetic);
       if (this.state.state.getDictionaryManagement().putWordToDictionary(add_word)){
         this.state.input_search.setText(word.getText().trim());
         this.state.state.showSearchPane();
@@ -45,10 +46,11 @@ public class AddWordController implements Initializable {
     this.state = state;
   }
 
-  public void initData(OffTranslateController state, String word, String explain) {
+  public void initData(OffTranslateController state, String word, String phonetic, String explain) {
     this.state = state;
     this.word.setText(word);
     this.explain.setText(explain);
+    this.phonetic = phonetic;
   }
 
   @Override
