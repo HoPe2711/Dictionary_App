@@ -26,7 +26,7 @@
                   </ImageView>
                </graphic>
             </Button>
-            <Button layoutX="14.0" layoutY="284.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="65.0" style="-fx-background-color: #2a4879;">
+            <Button fx:id="btn_bookmark" onAction="#handleClickSidebar" layoutX="14.0" layoutY="284.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="65.0" style="-fx-background-color: #2a4879;">
                <graphic>
                   <ImageView fitHeight="48.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true">
                      <image>

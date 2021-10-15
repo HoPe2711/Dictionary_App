@@ -11,7 +11,7 @@ import javafx.scene.input.MouseEvent;
 public class ViewWordOffline {
 
     @FXML
-    private Button btn_delete_word, btn_put_word;
+    private Button btn_delete_word, btn_put_word, btn_bookmark;
     @FXML
     private Label view_word_spelling;
     @FXML
@@ -40,6 +40,14 @@ public class ViewWordOffline {
             this.state.state.showPutPane(view_word_spelling.getText(), view_word_phonetic.getText(), view_word_explain.getText());
         }
     }
+
+    @FXML
+    public void handleBookmark(ActionEvent event){
+        if (event.getSource() == btn_bookmark) {
+            this.state.state.showBookmarkPane(view_word_spelling.getText(), view_word_phonetic.getText(), view_word_explain.getText());
+        }
+    }
+
 
     public void initData(OffTranslateController state, String spelling, String explain, String phonetic) {
         this.state = state;

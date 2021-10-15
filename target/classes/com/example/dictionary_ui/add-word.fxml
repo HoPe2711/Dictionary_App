@@ -1,15 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.text.*?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
-
 <AnchorPane prefHeight="839.0" prefWidth="1137.0" style="-fx-background-color: #fff7d3;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dictionary_ui.controller.AddWordController">
    <children>
       <Button fx:id="btn_add_word" alignment="CENTER" contentDisplay="CENTER" layoutX="936.0" layoutY="745.0" mnemonicParsing="false" onAction="#handleEnterAddWord" prefHeight="59.0" prefWidth="112.0" style="-fx-background-color: #2a4879; -fx-background-radius: 50;" text="Add" textAlignment="CENTER" textFill="WHITE">

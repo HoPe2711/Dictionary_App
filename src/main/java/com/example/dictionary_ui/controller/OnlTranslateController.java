@@ -44,9 +44,7 @@ public class OnlTranslateController{
           e.printStackTrace();
         }
         String finaloutput = result.toString();
-        Platform.runLater(() -> {
-          output_search.setText(finaloutput);
-        });
+        Platform.runLater(() -> output_search.setText(finaloutput));
       }).start();
     }
   }

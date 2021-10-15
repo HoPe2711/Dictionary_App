@@ -8,15 +8,10 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import java.sql.Statement;
 
 public class SymAntWordService {
 
-  public static void main(String args[]) {
-    System.out.println(getAntonym("clockwise"));
-  }
-
-  public static String getSysnonym(String wordRequest) {
+  public static String getSynonym(String wordRequest) {
     String result = "";
     try {
       Connection conn = getConnection(DB_URL, USER_NAME, PASSWORD);
@@ -24,7 +19,7 @@ public class SymAntWordService {
       stmt.setString(1, wordRequest);
       ResultSet rs = stmt.executeQuery();
       while (rs.next()) {
-        result = rs.getString(3);
+        result = rs.getString(3).replace(",","\n");
       }
       conn.close();
     } catch (Exception ex) {
@@ -41,7 +36,7 @@ public class SymAntWordService {
       stmt.setString(1, wordRequest);
       ResultSet rs = stmt.executeQuery();
       while (rs.next()) {
-        result = rs.getString(3);
+        result = rs.getString(3).replace(",","\n");
       }
       conn.close();
     } catch (Exception ex) {
@@ -56,9 +51,7 @@ public class SymAntWordService {
     try {
       Class.forName("com.mysql.jdbc.Driver");
       conn = DriverManager.getConnection(dbURL, userName, password);
-      System.out.println("connect successfully!");
     } catch (Exception ex) {
-      System.out.println("connect failure!");
       ex.printStackTrace();
     }
     return conn;

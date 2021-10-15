@@ -2,6 +2,7 @@ package com.example.dictionary_ui.services;
 
 import com.sun.speech.freetts.Voice;
 import com.sun.speech.freetts.VoiceManager;
+import java.util.Objects;
 
 public class TTS {
   public static void speakEnglish(String spelling){
@@ -13,7 +14,7 @@ public class TTS {
       voice.allocate();
     }
     try {
-      voice.setRate(140);
+      Objects.requireNonNull(voice).setRate(140);
       voice.setPitch(100);
       voice.setVolume(100);
       voice.speak(spelling);

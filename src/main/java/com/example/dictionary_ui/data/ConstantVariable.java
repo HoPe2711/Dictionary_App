@@ -7,6 +7,7 @@ public class ConstantVariable {
     public static final String PATH_ON_DIC = "/com/example/dictionary_ui/online-translate.fxml";
     public static final String PATH_ADD_WORD = "/com/example/dictionary_ui/add-word.fxml";
     public static final String PATH_VIEW_WORD = "/com/example/dictionary_ui/view-word-offline.fxml";
+    public static final String PATH_BOOKMARK = "/com/example/dictionary_ui/bookmark.fxml";
     public static final String DB_URL = "jdbc:mysql://localhost:3306/dictionary";
     public static final String USER_NAME = "root";
     public static final String PASSWORD = "";
