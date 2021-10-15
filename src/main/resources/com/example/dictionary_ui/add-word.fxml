@@ -1,20 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
-<AnchorPane prefHeight="839.0" prefWidth="1137.0" style="-fx-background-color: #fff7d3;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dictionary_ui.controller.AddWordController">
+
+<AnchorPane prefHeight="839.0" prefWidth="1137.0" style="-fx-background-color: #fff7d3;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dictionary_ui.controller.AddWordController">
    <children>
-      <Button fx:id="btn_add_word" alignment="CENTER" contentDisplay="CENTER" layoutX="996.0" layoutY="745.0" mnemonicParsing="false" onAction="#handleEnterAddWord" prefHeight="59.0" prefWidth="112.0" style="-fx-background-color: #2a4879; -fx-background-radius: 50;" text="Add" textAlignment="CENTER" textFill="WHITE">
+      <Button fx:id="btn_add_word" alignment="CENTER" contentDisplay="CENTER" layoutX="936.0" layoutY="745.0" mnemonicParsing="false" onAction="#handleEnterAddWord" prefHeight="59.0" prefWidth="112.0" style="-fx-background-color: #2a4879; -fx-background-radius: 50;" text="Add" textAlignment="CENTER" textFill="WHITE">
          <font>
             <Font size="26.0" />
          </font>
       </Button>
-      <TextArea fx:id="explain" layoutX="156.0" layoutY="153.0" prefHeight="534.0" prefWidth="892.0" promptText="Definition" style="-fx-text-box-border: #2a4879; -fx-focus-color: #2a4879; -fx-border-radius: 50;" AnchorPane.leftAnchor="156.0" />
-      <TextField fx:id="word" layoutX="150.0" layoutY="67.0" prefHeight="59.0" prefWidth="353.0" promptText="Word" style="-fx-background-radius: 30;" AnchorPane.leftAnchor="156.0" />
-      <Button fx:id="btn_put_word" alignment="CENTER" contentDisplay="CENTER" layoutX="833.0" layoutY="745.0" mnemonicParsing="false" onAction="#handleEnterPutWord" prefHeight="59.0" prefWidth="126.0" style="-fx-background-color: #2a4879; -fx-background-radius: 50;" text="Change" textAlignment="CENTER" textFill="WHITE">
+      <TextArea fx:id="explain" layoutX="156.0" layoutY="153.0" prefHeight="552.0" prefWidth="892.0" promptText="Definition" style="-fx-text-box-border: #2a4879; -fx-focus-color: #2a4879; -fx-border-radius: 50;" AnchorPane.leftAnchor="156.0">
+         <font>
+            <Font size="27.0" />
+         </font></TextArea>
+      <TextField fx:id="word" layoutX="150.0" layoutY="67.0" prefHeight="59.0" prefWidth="353.0" promptText="Word" style="-fx-background-radius: 30;" AnchorPane.leftAnchor="156.0">
+         <font>
+            <Font size="27.0" />
+         </font></TextField>
+      <Button fx:id="btn_put_word" alignment="CENTER" contentDisplay="CENTER" layoutX="763.0" layoutY="745.0" mnemonicParsing="false" onAction="#handleEnterPutWord" prefHeight="59.0" prefWidth="126.0" style="-fx-background-color: #2a4879; -fx-background-radius: 50;" text="Change" textAlignment="CENTER" textFill="WHITE">
          <font>
             <Font size="26.0" />
          </font>

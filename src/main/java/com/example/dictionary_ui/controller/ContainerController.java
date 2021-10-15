@@ -54,8 +54,8 @@ public class ContainerController implements Initializable {
     }
 
     public void resetStyleNav() {
-        btn_nav_search_off.setStyle(null);
-        btn_nav_search_on.setStyle(null);
+        btn_nav_search_off.setStyle("-fx-background-color:  #2a4879;");
+        btn_nav_search_on.setStyle("-fx-background-color:  #2a4879;");
 //        btn_nav_history.setStyle(null);
 //        btn_nav_bookmark.setStyle(null);
 //        btn_nav_edit.setStyle(null);
@@ -64,15 +64,15 @@ public class ContainerController implements Initializable {
     public void showSearchPane() {
         this.setContentPane(offTranslatePane);
         offTranslateController.initData(this);
-//        this.resetStyleNav();
-//        btn_nav_search_off.setStyle("-fx-background-color:  #13109c;");
+        this.resetStyleNav();
+        btn_nav_search_off.setStyle("-fx-border-color: #110b1e;");
     }
 
     public void showOnlineSearchPane() {
         this.setContentPane(onTranslatePane);
         onlTranslateController.initData(this);
-//        this.resetStyleNav();
-//        btn_nav_search_off.setStyle("-fx-background-color:  #13109c;");
+        this.resetStyleNav();
+        btn_nav_search_on.setStyle("-fx-border-color: #110b1e;");
     }
 
     public void showAddPane() {
