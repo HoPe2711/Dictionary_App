@@ -6,14 +6,19 @@ import static com.example.dictionary_ui.data.ConstantVariable.PATH_OFF_DIC;
 import static com.example.dictionary_ui.data.ConstantVariable.PATH_ON_DIC;
 
 import com.example.dictionary_ui.services.DictionaryManagement;
+import com.sun.speech.freetts.en.us.FeatureProcessors.SylOut;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 
 public class ContainerController implements Initializable {
@@ -55,53 +60,53 @@ public class ContainerController implements Initializable {
     }
 
     private void resetStyleNav() {
-        btn_nav_search_off.setStyle("-fx-background-color:  #2a4879;");
-        btn_nav_search_on.setStyle("-fx-background-color:  #2a4879;");
-//        btn_nav_history.setStyle(null);
-//        btn_nav_bookmark.setStyle(null);
+        btn_nav_search_off.setStyle("-fx-background-color:transparent;");
+        btn_nav_search_on.setStyle("-fx-background-color:transparent;");
+        btn_bookmark.setStyle("-fx-background-color:transparent;");
+        btn_add_word.setStyle("-fx-background-color:transparent;");
 //        btn_nav_edit.setStyle(null);
     }
 
     public void showSearchPane() {
         this.setContentPane(offTranslatePane);
         offTranslateController.initData(this);
-//        this.resetStyleNav();
-//        btn_nav_search_off.setStyle("-fx-border-color: #110b1e;");
+        this.resetStyleNav();
+        btn_nav_search_off.setStyle("-fx-background-color: #213960;");
     }
 
     public void showOnlineSearchPane() {
         this.setContentPane(onTranslatePane);
         onlTranslateController.initData(this);
-//        this.resetStyleNav();
-//        btn_nav_search_on.setStyle("-fx-border-color: #110b1e;");
+        this.resetStyleNav();
+        btn_nav_search_on.setStyle("-fx-background-color: #213960;");
     }
 
     public void showAddPane() {
         this.setContentPane(addWordPane);
         addWordController.initData(this.offTranslateController);
-//        this.resetStyleNav();
-//        btn_nav_search_off.setStyle("-fx-background-color:  #13109c;");
+        this.resetStyleNav();
+        btn_add_word.setStyle("-fx-background-color:  #213960;");
     }
 
     public void showPutPane(String word, String phonetic, String explain){
         this.setContentPane(addWordPane);
         addWordController.initData(this.offTranslateController, word, phonetic, explain);
-        //        this.resetStyleNav();
-//        btn_nav_search_off.setStyle("-fx-background-color:  #13109c;");
+        this.resetStyleNav();
+        btn_add_word.setStyle("-fx-background-color:  #213960;");
     }
 
     public void showBookmarkPane(){
         this.setContentPane(bookmarkPane);
         bookmarkController.initData(this);
-        //        this.resetStyleNav();
-//        btn_nav_search_off.setStyle("-fx-background-color:  #13109c;");
+        this.resetStyleNav();
+        btn_bookmark.setStyle("-fx-background-color:  #213960;");
     }
 
     public void showBookmarkPane(String word, String phonetic, String explain) {
         this.setContentPane(bookmarkPane);
         bookmarkController.initData(this,word, phonetic, explain);
-//        this.resetStyleNav();
-//        btn_nav_search_off.setStyle("-fx-border-color: #110b1e;");
+        this.resetStyleNav();
+        btn_bookmark.setStyle("-fx-background-color:  #213960;");
     }
 
     @Override
