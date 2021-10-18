@@ -6,19 +6,14 @@ import static com.example.dictionary_ui.data.ConstantVariable.PATH_OFF_DIC;
 import static com.example.dictionary_ui.data.ConstantVariable.PATH_ON_DIC;
 
 import com.example.dictionary_ui.services.DictionaryManagement;
-import com.sun.speech.freetts.en.us.FeatureProcessors.SylOut;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
-import javafx.scene.image.Image;
-import javafx.scene.image.ImageView;
-import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 
 public class ContainerController implements Initializable {
