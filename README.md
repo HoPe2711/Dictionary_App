@@ -1,5 +1,7 @@
 # Project OOP - Dictionary App
-## 1. Tác giả
+## 1. Tác giả:
+* Nguyễn Thái Bình: Hổ Chúa
+* Nguyễn Tấn Minh - 20020081 : Rồng Con
 ## 2. IDE, ngôn ngữ lập trình (front, back, database)
 ## 3. Chức năng:
  * Tra từ offline 
