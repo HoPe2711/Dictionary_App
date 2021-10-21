@@ -1,6 +1,7 @@
 package com.example.dictionary_ui.controller;
 
 import static com.example.dictionary_ui.data.ConstantVariable.PATH_ADD_WORD;
+import static com.example.dictionary_ui.data.ConstantVariable.PATH_AUTHOR;
 import static com.example.dictionary_ui.data.ConstantVariable.PATH_BOOKMARK;
 import static com.example.dictionary_ui.data.ConstantVariable.PATH_OFF_DIC;
 import static com.example.dictionary_ui.data.ConstantVariable.PATH_ON_DIC;
@@ -19,7 +20,7 @@ import javafx.scene.layout.AnchorPane;
 public class ContainerController implements Initializable {
 
     @FXML
-    public Button btn_nav_search_off, btn_nav_search_on, btn_add_word, btn_bookmark;
+    public Button btn_nav_search_off, btn_nav_search_on, btn_add_word, btn_bookmark, btn_author;
     @FXML
     public AnchorPane content_pane;
 
@@ -28,10 +29,12 @@ public class ContainerController implements Initializable {
     private AnchorPane onTranslatePane = null;
     private AnchorPane addWordPane = null;
     private AnchorPane bookmarkPane = null;
+    private AnchorPane authorPane = null;
     private OffTranslateController offTranslateController;
     private OnlTranslateController onlTranslateController;
     private AddWordController addWordController;
     private BookmarkController bookmarkController;
+    private AuthorController authorController;
 
     public DictionaryManagement getDictionaryManagement() {
         return dictionaryManagement;
@@ -51,6 +54,8 @@ public class ContainerController implements Initializable {
             showAddPane();
         } else if (event.getSource() == btn_bookmark) {
             showBookmarkPane();
+        } else if (event.getSource() == btn_author) {
+            showAuthorPane();
         }
     }
 
@@ -59,7 +64,14 @@ public class ContainerController implements Initializable {
         btn_nav_search_on.setStyle("-fx-background-color:transparent;");
         btn_bookmark.setStyle("-fx-background-color:transparent;");
         btn_add_word.setStyle("-fx-background-color:transparent;");
-//        btn_nav_edit.setStyle(null);
+        btn_author.setStyle("-fx-background-color:transparent;");
+    }
+
+    private void showAuthorPane() {
+        this.setContentPane(authorPane);
+        authorController.initData(this);
+        this.resetStyleNav();
+        btn_author.setStyle("-fx-background-color: #213960;");
     }
 
     public void showSearchPane() {
@@ -145,6 +157,17 @@ public class ContainerController implements Initializable {
         } catch (IOException e) {
             System.out.println("Error load add_pane pane.");
         }
+
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader();
+            fxmlLoader.setLocation(getClass().getResource(PATH_AUTHOR));
+            authorPane = fxmlLoader.load();
+            authorController = fxmlLoader.getController();
+            authorController.initData(this);
+        } catch (IOException e) {
+            System.out.println("Error load author_pane pane.");
+        }
+
         this.showSearchPane();
     }
 }
