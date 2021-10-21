@@ -1,13 +1,11 @@
 package com.example.dictionary_ui.services.mysql;
 
-import static com.example.dictionary_ui.data.ConstantVariable.DB_URL;
-import static com.example.dictionary_ui.data.ConstantVariable.PASSWORD;
-import static com.example.dictionary_ui.data.ConstantVariable.USER_NAME;
-
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+
+import static com.example.dictionary_ui.data.ConstantVariable.*;
 
 public class SymAntWordService {
 

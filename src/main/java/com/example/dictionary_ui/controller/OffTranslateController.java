@@ -1,12 +1,6 @@
 package com.example.dictionary_ui.controller;
 
-import static com.example.dictionary_ui.data.ConstantVariable.PATH_VIEW_WORD;
-
 import com.example.dictionary_ui.entity.Word;
-import java.io.IOException;
-import java.net.URL;
-import java.util.ResourceBundle;
-import java.util.Set;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -17,6 +11,13 @@ import javafx.scene.control.TextField;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
+
+import java.io.IOException;
+import java.net.URL;
+import java.util.ResourceBundle;
+import java.util.Set;
+
+import static com.example.dictionary_ui.data.ConstantVariable.PATH_VIEW_WORD;
 
 public class OffTranslateController implements Initializable {
 

@@ -1,21 +1,18 @@
 package com.example.dictionary_ui.controller;
 
-import static com.example.dictionary_ui.data.ConstantVariable.PATH_ADD_WORD;
-import static com.example.dictionary_ui.data.ConstantVariable.PATH_AUTHOR;
-import static com.example.dictionary_ui.data.ConstantVariable.PATH_BOOKMARK;
-import static com.example.dictionary_ui.data.ConstantVariable.PATH_OFF_DIC;
-import static com.example.dictionary_ui.data.ConstantVariable.PATH_ON_DIC;
-
 import com.example.dictionary_ui.services.DictionaryManagement;
-import java.io.IOException;
-import java.net.URL;
-import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.layout.AnchorPane;
+
+import java.io.IOException;
+import java.net.URL;
+import java.util.ResourceBundle;
+
+import static com.example.dictionary_ui.data.ConstantVariable.*;
 
 public class ContainerController implements Initializable {
 

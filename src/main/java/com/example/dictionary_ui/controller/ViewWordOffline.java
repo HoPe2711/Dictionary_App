@@ -1,12 +1,13 @@
 package com.example.dictionary_ui.controller;
 
 import com.example.dictionary_ui.services.TTS;
-import java.util.concurrent.CompletableFuture;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
+
+import java.util.concurrent.CompletableFuture;
 
 public class ViewWordOffline {
 

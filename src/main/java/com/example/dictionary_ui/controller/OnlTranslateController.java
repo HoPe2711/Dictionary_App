@@ -2,8 +2,6 @@ package com.example.dictionary_ui.controller;
 
 import com.example.dictionary_ui.services.GoogleApiTranslate;
 import com.example.dictionary_ui.services.TTS;
-import java.io.IOException;
-import java.util.concurrent.CompletableFuture;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -11,6 +9,9 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import javafx.scene.input.MouseEvent;
+
+import java.io.IOException;
+import java.util.concurrent.CompletableFuture;
 
 public class OnlTranslateController{
   @FXML

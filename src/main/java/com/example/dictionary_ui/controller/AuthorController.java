@@ -1,13 +1,13 @@
 package com.example.dictionary_ui.controller;
 
-import static com.example.dictionary_ui.data.ConstantVariable.DRAGON_PATH;
-import static com.example.dictionary_ui.data.ConstantVariable.TIGER_PATH;
-
 import com.example.dictionary_ui.DictionaryApp;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Hyperlink;
 import javafx.scene.layout.Border;
+
+import static com.example.dictionary_ui.data.ConstantVariable.DRAGON_PATH;
+import static com.example.dictionary_ui.data.ConstantVariable.TIGER_PATH;
 
 public class AuthorController {
   private ContainerController state;

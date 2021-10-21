@@ -2,10 +2,11 @@ package com.example.dictionary_ui.controller;
 
 import com.example.dictionary_ui.services.TTS;
 import com.example.dictionary_ui.services.mysql.SymAntWordService;
-import java.util.concurrent.CompletableFuture;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
+
+import java.util.concurrent.CompletableFuture;
 
 public class BookmarkController {
   private ContainerController state;
